@@ -1,1 +1,34 @@
 # activity-4
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hanzel</title>
+</head>
+<body>
+	<label>Enter Amount:</label>
+	<input type="text" id="sum">
+	<input type="button" value="Ok" onclick="quantity()">
+	<h3 id="response"></h3>
+	<script type="text/javascript">
+		function quantity()
+		{
+			var x=Number(document.getElementById('sum').value);
+			if (isNaN(x)==false)
+			{
+				if (x %100==0)
+				{
+					document.getElementById('response').innerHTML="Amount is accepted"
+				}
+				else
+				{
+					document.getElementById('response').innerHTML="Amount is not accepted"
+				}
+			}
+			else
+			{
+				alert("Invalid!")
+			}
+		}
+	</script>
+</body>
+</html>
